@@ -96,7 +96,7 @@ get_source_trap-fpe() {
     if [ ! -e DynamoRIO-$DYNAMORIO_VERSION.tar.gz ]; then
 	wget https://github.com/DynamoRIO/dynamorio/releases/download/$DYNAMORIO_RELEASE/DynamoRIO-$DYNAMORIO_VERSION.tar.gz
     fi
-    get_source "git clone https://jun0-aist@bitbucket.org/jun0-aist/trap-fpe" trap-fpe
+    get_source "git clone jun0-aist@bitbucket.org:jun0-aist/trap-fpe" trap-fpe
 }
 
 get_source_flexiport() {
