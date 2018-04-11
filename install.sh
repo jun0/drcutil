@@ -64,6 +64,13 @@ install_OpenRTM-aist() {
 	| tee $SRC_DIR/OpenRTM-aist.log
 }
 
+install_OpenRTM-aist-Python() {
+    cd $SRC_DIR/OpenRTM-aist-Python
+    python setup.py build 2>&1 | tee $SRC_DIR/OpenRTM-aist-Python.log
+    $SUDO python setup.py install --prefix="$PREFIX" 2>&1 \
+        | tee -a $SRC_DIR/OpenRTM-aist-Python.log
+}
+
 install_openhrp3() {
     cmake_install_with_option "openhrp3" -DCOMPILE_JAVA_STUFF=OFF -DBUILD_GOOGLE_TEST="$BUILD_GOOGLE_TEST" -DOPENRTM_DIR="$PREFIX"
 }

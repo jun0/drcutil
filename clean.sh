@@ -4,6 +4,8 @@ source config.sh
 
 cd $SRC_DIR/OpenRTM-aist
 make maintainer-clean
+cd $SRC_DIR/OpenRTM-aist-Python
+python setup.py clean
 rm -rf $SRC_DIR/openhrp3/$BUILD_SUBDIR
 rm -rf $SRC_DIR/HRP2/$BUILD_SUBDIR
 rm -rf $SRC_DIR/HRP2KAI/$BUILD_SUBDIR
